@@ -1,0 +1,76 @@
+div {
+  border: 1px solid black;
+}
+.box {
+  display: grid;
+  grid-template-columns: 150px 2fr 40% 15rem;
+  grid-template-rows: repeat(3, 250px);
+  grid-auto-columns: 40px;
+  column-gap: 20px;
+}
+.container {
+ 
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: 100px 200px 100px;
+  grid-template-areas:
+    "redd redd yelloww yelloww"
+    "bluee blackk blackk greenn"
+    "purplee purplee lblue lblue";
+}
+.item1 {
+  grid-area: redd;
+  background-color: red;
+}
+
+.item2 {
+  grid-area: yelloww;
+  background-color: yellow;
+}
+
+.item3 {
+  grid-area: bluee;
+  background-color: blue;
+}
+
+.item4 {
+  grid-area: greenn;
+  background-color: green;
+}
+.item5 {
+  grid-area: purplee;
+  background-color: purple;
+}
+
+.item6 {
+  grid-area: lblue;
+  background-color: lightblue;
+}
+.item7 {
+  grid-area: blackk;
+  background-color: white;
+}
+
+.item1:hover ~ .item7 {
+  background: linear-gradient(red,white);
+}
+.item2:hover ~ .item7 {
+  background: linear-gradient(yellow,white);
+}
+.item3:hover ~ .item7 {
+  background: radial-gradient(blue,white);
+}
+.item4:hover ~ .item7 {
+  background: linear-gradient(green,white);
+}
+.item5:hover ~ .item7 {
+  background: linear-gradient(purple,white);
+}
+.item6:hover ~ .item7 {
+  background: linear-gradient(lightblue,black);
+}
+.biggest {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
